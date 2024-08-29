@@ -23,4 +23,33 @@ test('verify datepicker with js values in playwright',async({page})=>{
     // 24/03/2025
     let mm = `${0}${m}`
     console.log(mm) // 03
+
+    // DD/MM/YY
+    let DD = `${d}/${m}/${y}`
+    console.log(DD)
+
+    let futureMntYear = `${mnth} ${y}`
+    console.log(futureMntYear)
+
+    await page.locator('#datepicker').click()
+    while(true){
+        let monthYear = await page.locator('[class="datepicker-switch"]').first().textContent()
+        console.log(monthYear)
+        if(monthYear === futureMntYear){
+            break
+        }
+        await page.locator('[class="next"]').first().click()
+       // await page.waitForTimeout(3000)
+    }
+    let dayCount = await page.locator('[class="day"]').count()
+    console.log(dayCount)
+    for(let i=0; i<dayCount; i++){
+        let text = await page.locator('[class="day"]').nth(i).textContent()
+       // console.log(text)
+       if(text == d){
+        await page.locator('[class="day"]').nth(i).click()
+        break
+       }
+    }
+    await page.waitForTimeout(3000)
 })
