@@ -1,7 +1,37 @@
+[
 {
     "fstName" : "vijayalakshmi",
     "lstName" : "koka",
     "email":"ammu.duggi@gmail.com",
     "msg":"i am learning playwright using js",
     "SuccessMsg":"Thank You for your Message!"
+},
+{
+    "fstName" : "satya",
+    "lstName" : "koka",
+    "email":"satya.duggi@gmail.com",
+    "msg":"i am learning playwright using js",
+    "SuccessMsg":"Thank You for your Message!"
+},
+{
+    "fstName" : "shiva",
+    "lstName" : "koka",
+    "email":"shiva.koka@gmail.com",
+    "msg":"i am learning playwright using js",
+    "SuccessMsg":"Thank You for your Message!"
+},
+{
+    "fstName" : "koshika",
+    "lstName" : "koka",
+    "email":"koshika.koka@gmail.com",
+    "msg":"i am learning playwright using js",
+    "SuccessMsg":"Thank You for your Message!"
+},
+{
+    "fstName" : "jathin",
+    "lstName" : "koka",
+    "email":"jathin.koka@gmail.com",
+    "msg":"i am learning playwright using js",
+    "SuccessMsg":"Thank You for your Message!"
 }
+]
