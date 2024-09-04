@@ -1,0 +1,11 @@
+api 
+test data 
+tabel
+shadow dom 
+multitab multiwindow ==> Context 
+POM / BDD
+confrigation file 
+session login 
+downlode file 
+report 
+traces 
