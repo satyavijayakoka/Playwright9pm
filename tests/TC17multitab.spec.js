@@ -16,6 +16,7 @@ test('verify multiTab with removing target_blank attribute',async({browser})=>{
     const context = await browser.newContext() // launches new fresh browser
     const page = await context.newPage() // launches new fresh tab in browser
     await page.goto('https://rahulshettyacademy.com/AutomationPractice/')
+    // to interact with DOM we use evaluate() inbuilt method
     await page.evaluate(()=>{
         const selector = document.querySelector('[id="opentab"]')
         selector.removeAttribute('target','_blank')
@@ -49,3 +50,5 @@ test.only('add disabled attribute to input element',async({browser})=>{
     })
     await page.waitForTimeout(5000)
 })
+
+// npx playwright test TC17multitab.spec.js --headed --debug ===> for stepe by step execution in playwright
