@@ -29,7 +29,7 @@ expect(res.total_pages).toBe(2)
 expect(req.status()).toBe(200)
 })
 
-test.only('verify API POST request',async({request})=>{
+test('verify API POST request',async({request})=>{
 let req2 = await request.post("https://reqres.in/api/users",{
     data: {
             "name": "vijayalakshmi",
@@ -45,4 +45,25 @@ expect(res2.job).toBe("student")
  id = res2.id
 console.log(id)
 
+})
+
+test.only('verify API PUT request',async({request})=>{
+await console.log(id)
+let req3 = await request.put(`https://reqres.in/api/users/${id}`,{
+    data:{
+        "name": "koshika",
+        "job": "zion resident"
+    }
+})
+let res3 = await req3.json()
+console.log(res3)
+expect(req3.status()).toBe(200)
+expect(res3.name).toBe('koshika')
+expect(res3.job).toBe('zion resident')
+})
+
+test.only('verify API DELETE request',async({request})=>{
+await console.log(id)
+let req4 = await request.delete(`https://reqres.in/api/users/${id}`)
+expect(req4.status()).toBe(204)
 })
